@@ -48,4 +48,27 @@ func main() {
 		fmt.Print(index," ")
 		fmt.Println(booking)
 	}
+
+  //Conditional statements
+  //if else
+  abs := 1
+  if abs == 0{
+    fmt.Println("Go to Gym")
+  }else{
+    fmt.Println("Keep Going to Gym")
+  }
+
+  //Go programs are organized in packages
+  //A package is a collection of Go files
+  //package 1, package 2 and main package
+  SayHello()
+
+  //Points to Note
+  //To use functions from other packages we need to import
+  //To export a function we need to make the first letter capital
+  
+
+
+
+
 }
