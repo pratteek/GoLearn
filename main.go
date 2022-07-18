@@ -68,7 +68,44 @@ func main() {
   //To export a function we need to make the first letter capital
   
 
+  //Maps
+  //key-value pair
+  userData := make(map[string]string) //defines the map
+  userData["Name"]="Prateek"
+  userData["Age"]="22"
+  userData["DOB"]="20 Sep 1999"
+  fmt.Println(userData)
 
+  //struct 
+  //data with different dataypes
+  type student struct{
+    Name string
+    Age uint
+    email string
+  }
+
+  studentData := make([]student,2,2)
+  
+  studentData[0] = student{
+    Name: "Prateek",
+    Age: 22,
+    email: "prateek@google.com",
+  }
+  studentData[1] = student{
+    Name: "Paks",
+    Age: 23,
+    email: "paks@g.com",
+  }
+  
+  fmt.Println(studentData)
+  
+  // using struct student as a datatype
+  studentDataNew := student{
+    Name: "NewBoi",
+    Age: 0,
+    email: "newboi@gmail.com",
+  }
+  fmt.Println(studentDataNew)
 
 
 }
