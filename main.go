@@ -2,7 +2,13 @@ package main
 
 import (
 	"fmt"
+  "time"
 )
+
+func hello(){
+  time.Sleep(3 * time.Second)
+  fmt.Println("Hello Guys! Welcome back to my channel")
+}
 
 func main() {
   //Input and Output
@@ -107,5 +113,11 @@ func main() {
   }
   fmt.Println(studentDataNew)
 
+  //time packege
+  //time.sleep(10 * time.second)
 
+  //Go routines - Concurrency in Go
+  //Using concurrency, when a task takes time - in go it runs it in a new thread
+  go hello()
+  fmt.Println("Glad to have you back!")
 }
