@@ -21,12 +21,17 @@ var students =  []student{
 }
 func Home(w http.ResponseWriter,r *http.Request){
 	w.Header().Set("Content-Type","application/json")
-	json.NewEncoder(w).Encode(students)
+	json.NewEncoder(w).Encode("Home Page")
 	fmt.Println("Home Page")
+}
+func GetStudents(w http.ResponseWriter, r *http.Request){
+	w.Header().Set("Content-Type","application/json")
+	json.NewEncoder(w).Encode(students)
+	fmt.Println("/students endpoint hit")
 }
 func main(){
 	r := mux.NewRouter()
 	r.Path("/").Methods(http.MethodGet).HandlerFunc(Home)
-
+	r.Path("/students").Methods(http.MethodGet).HandlerFunc(GetStudents)
 	log.Fatal(http.ListenAndServe(":9000",r))
 }
